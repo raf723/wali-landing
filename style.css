@@ -1,0 +1,149 @@
+/* ==================== General ==================== */
+body {
+  background-color: rgb(20, 30, 60);
+}
+
+#div-one {
+  height: 98vh;
+  display: flex;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+  margin: 0 15%;
+}
+
+#div-one-one {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#logo-div {
+  height: 80px;
+  width: 80px;
+  border: solid 2px white;
+  border-radius: 12px;
+}
+
+#div-one-one #logo {
+  height: 80px;
+  width: 80px;
+}
+
+#div-one-one span {
+  font-size: 60px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+#div-one-one p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+#store-icons-div img {
+  height: 70px;
+  width: 230px;
+  margin-right: 8px;
+}
+
+/* ==================== Device ==================== */
+#div-one-two {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.device-div {
+  height: 760px;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 16px rgb(20, 20, 20);
+  border-radius: 60px;
+  background-color: transparent;
+  background-image: url("./assets/home-two.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.top-bar-div {
+  height: 32px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 20, 20);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.speaker-div {
+  height: 8px;
+  width: 22%;
+  background-color: rgb(12, 12, 12);
+  border-radius: 12px;
+  margin-bottom: 6px;
+  margin-left: 12px;
+}
+
+.camera-div {
+  height: 14px;
+  width: 14px;
+  background-color: rgb(12, 12, 12);
+  border-radius: 14px;
+  margin-bottom: 6px;
+  margin-left: 8px;
+}
+
+/* ==================== Media queries ==================== */
+@media screen and (max-width: 480px) {
+  #div-one {
+    flex-direction: column;
+    margin: 10% 10%;
+  }
+
+  #div-one-one {
+    width: 80%;
+  }
+
+  #store-icons-div img {
+    height: 60px;
+    width: 200px;
+    margin-top: 2px;
+    margin-right: 8px;
+  }
+
+  #div-one-two {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .device-div {
+    height: 648px;
+    min-width: 300px;
+    border-width: 16px;
+    border-radius: 52px;
+    margin-bottom: 40px;
+  }
+
+  .top-bar-div {
+    height: 26px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(20, 20, 20);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
