@@ -45,6 +45,11 @@ body {
   font-weight: 300;
 }
 
+/* ==================== Store icons ==================== */
+#store-icons-div a {
+  text-decoration: none;
+}
+
 #store-icons-div img {
   height: 70px;
   width: 230px;
