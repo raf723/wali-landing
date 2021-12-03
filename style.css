@@ -4,7 +4,7 @@ body {
 }
 
 #div-one {
-  height: 98vh;
+  height: 94vh;
   display: flex;
   font-family: "Lato", sans-serif;
   font-size: 20px;
@@ -13,7 +13,8 @@ body {
   margin: 0 15%;
 }
 
-#div-one-one {
+/* ==================== Left container ==================== */
+#div-one-left {
   height: 100%;
   width: 60%;
   display: flex;
@@ -29,18 +30,18 @@ body {
   border-radius: 12px;
 }
 
-#div-one-one #logo {
+#div-one-left #logo {
   height: 80px;
   width: 80px;
 }
 
-#div-one-one span {
+#div-one-left span {
   font-size: 60px;
   font-weight: 600;
   margin-top: 12px;
 }
 
-#div-one-one p {
+#div-one-left p {
   font-size: 18px;
   font-weight: 300;
 }
@@ -51,13 +52,31 @@ body {
 }
 
 #store-icons-div img {
-  height: 70px;
-  width: 230px;
+  height: 62px;
+  width: 210px;
   margin-right: 8px;
 }
 
-/* ==================== Device ==================== */
-#div-one-two {
+/* ==================== Uploader ==================== */
+#uploader-div {
+  margin-top: 12px;
+}
+
+#uploader-div button {
+  border: none;
+  border-radius: 2px;
+  background-color: white;
+  padding: 8px 12px;
+}
+
+#uploader-div span {
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 8px;
+}
+
+/* ==================== Right container (device) ==================== */
+#div-one-right {
   height: 100%;
   width: 40%;
   display: flex;
@@ -66,8 +85,8 @@ body {
 }
 
 .device-div {
-  height: 760px;
-  min-width: 350px;
+  height: 700px;
+  min-width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -110,6 +129,25 @@ body {
   margin-left: 8px;
 }
 
+/* ==================== Socials ==================== */
+#footer-div {
+  display: flex;
+  justify-content: center;
+}
+
+#footer-div a {
+  transition: all 0.3s linear;
+}
+
+#footer-div a:hover {
+  transform: translateY(-5px);
+}
+
+svg {
+  height: 30px;
+  width: 30px;
+}
+
 /* ==================== Media queries ==================== */
 @media screen and (max-width: 480px) {
   #div-one {
@@ -117,7 +155,7 @@ body {
     margin: 10% 10%;
   }
 
-  #div-one-one {
+  #div-one-left {
     width: 80%;
   }
 
@@ -128,7 +166,7 @@ body {
     margin-right: 8px;
   }
 
-  #div-one-two {
+  #div-one-right {
     width: 100%;
     margin-top: 40px;
   }
