@@ -46,8 +46,9 @@
 
         <!-- File uploader -->
         <div id="uploader-div">
+          <input type="file" id="upload-input" hidden="hidden" />
           <button type="button" id="upload-button">Choose file</button>
-          <span>No file chosen</span>
+          <span id="upload-status">No file chosen</span>
         </div>
       </div>
 
@@ -83,5 +84,22 @@
         </svg>
       </a>
     </div>
+
+    <!-- File uploader logic -->
+    <script type="text/javascript">
+      const uploadInput = document.getElementById("upload-input");
+      const uploadButton = document.getElementById("upload-button");
+      const uploadStatus = document.getElementById("upload-status");
+
+      uploadButton.addEventListener("click", function () {
+        uploadInput.click();
+      });
+
+      uploadInput.addEventListener("change", function () {
+        uploadStatus.innerHTML = uploadInput.value
+          ? uploadInput.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1]
+          : "No file chosen";
+      });
+    </script>
   </body>
 </html>
