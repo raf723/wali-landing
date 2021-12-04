@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;700;900&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/jpg" href="./assets/wali.png" />
@@ -44,12 +44,8 @@
           </a>
         </div>
 
-        <!-- File uploader -->
-        <div id="uploader-div">
-          <input type="file" id="upload-input" hidden="hidden" />
-          <button type="button" id="upload-button">Choose file</button>
-          <span id="upload-status">No file chosen</span>
-        </div>
+        <!-- File upload button -->
+        <button type="button" id="upload-button">Upload timetable</button>
       </div>
 
       <!-- Right container -->
@@ -85,10 +81,17 @@
       </a>
     </div>
 
+    <!-- File upload modal -->
+    <!-- <div id="upload-modal">
+      <input type="file" id="upload-input" hidden="hidden" />
+      <button type="button" id="choose-file-button">Choose file</button>
+      <span id="upload-status">No file chosen</span>
+    </div> -->
+
     <!-- File uploader logic -->
     <script type="text/javascript">
       const uploadInput = document.getElementById("upload-input");
-      const uploadButton = document.getElementById("upload-button");
+      const uploadButton = document.getElementById("choose-file-button");
       const uploadStatus = document.getElementById("upload-status");
 
       uploadButton.addEventListener("click", function () {

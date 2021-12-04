@@ -1,6 +1,10 @@
+:root {
+  --waliBlue: rgb(20, 30, 60);
+}
+
 /* ==================== General ==================== */
 body {
-  background-color: rgb(20, 30, 60);
+  background-color: var(--waliBlue);
 }
 
 #div-one {
@@ -57,19 +61,31 @@ body {
   margin-right: 8px;
 }
 
-/* ==================== Uploader ==================== */
-#uploader-div {
+/* ==================== Upload modal ==================== */
+#upload-button {
+  color: white;
+  font-size: 14px;
+  font-weight: 100;
+  border: solid 1px white;
+  border-radius: 6px;
+  background-color: var(--waliBlue);
+  padding: 12px 16px;
+  margin-top: 16px;
+}
+
+/* ==================== Upload modal ==================== */
+#upload-modal {
   margin-top: 12px;
 }
 
-#uploader-div button {
+#upload-modal button {
   border: none;
   border-radius: 2px;
   background-color: white;
   padding: 8px 12px;
 }
 
-#uploader-div span {
+#upload-modal span {
   font-size: 14px;
   font-weight: 400;
   margin-left: 8px;
