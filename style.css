@@ -6,7 +6,10 @@
 body {
   font-family: "Lato", sans-serif;
   background-color: var(--waliBlue);
-  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 #div-one {
