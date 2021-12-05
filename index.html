@@ -51,8 +51,9 @@
         <div id="upload-div">
           <h2>Upload timetable</h2>
           <input type="file" id="upload-input" hidden="hidden" />
-          <span id="upload-status">No file chosen</span>
-          <button type="button" id="choose-file-button">Choose file</button>
+          <span id="file-status">No file chosen</span>
+          <button type="button" id="select-file-button">Select file</button>
+          <button type="button" id="upload-button">Upload</button>
         </div>
 
         <!-- Device -->
@@ -87,21 +88,26 @@
       </a>
     </div>
 
+    <!-- Spinner -->
+    <div id="spinner-div">
+      <div class="lds-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
     <!-- File uploader logic -->
-    <script type="text/javascript">
-      const uploadInput = document.getElementById("upload-input");
-      const uploadButton = document.getElementById("choose-file-button");
-      const uploadStatus = document.getElementById("upload-status");
-
-      uploadButton.addEventListener("click", function () {
-        uploadInput.click();
-      });
-
-      uploadInput.addEventListener("change", function () {
-        uploadStatus.innerHTML = uploadInput.value
-          ? uploadInput.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1]
-          : "No file chosen";
-      });
-    </script>
+    <script src="firebase.js" type="module"></script>
+    <script src="script.js" type="module"></script>
   </body>
 </html>
