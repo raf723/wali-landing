@@ -43,20 +43,26 @@
             <img class="download-icon" src="./assets/play-store-download.svg" />
           </a>
         </div>
-
-        <!-- File upload button -->
-        <button type="button" id="upload-button">Upload timetable</button>
       </div>
 
       <!-- Right container -->
       <div id="div-one-right">
-        <div class="device-div">
+        <!-- File upload -->
+        <div id="upload-div">
+          <h2>Upload timetable</h2>
+          <input type="file" id="upload-input" hidden="hidden" />
+          <span id="upload-status">No file chosen</span>
+          <button type="button" id="choose-file-button">Choose file</button>
+        </div>
+
+        <!-- Device -->
+        <!-- <div class="device-div">
           <div class="top-bar-div">
             <div class="speaker-div"></div>
             <div class="camera-div"></div>
           </div>
           <div class="bottom-bar-div"></div>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -80,13 +86,6 @@
         </svg>
       </a>
     </div>
-
-    <!-- File upload modal -->
-    <!-- <div id="upload-modal">
-      <input type="file" id="upload-input" hidden="hidden" />
-      <button type="button" id="choose-file-button">Choose file</button>
-      <span id="upload-status">No file chosen</span>
-    </div> -->
 
     <!-- File uploader logic -->
     <script type="text/javascript">

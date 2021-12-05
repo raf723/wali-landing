@@ -61,45 +61,50 @@ body {
   margin-right: 8px;
 }
 
-/* ==================== Upload modal ==================== */
-#upload-button {
+/* ==================== Right container (upload input) ==================== */
+#div-one-right {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#upload-div {
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+  border: solid 2px white;
+  border-radius: 6px;
+  padding: 24px;
+}
+
+#upload-div h2 {
+  font-size: 32px;
+  margin: 0px;
+}
+
+#upload-div span {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+#upload-div button {
   color: white;
   font-size: 14px;
   font-weight: 100;
   border: solid 1px white;
   border-radius: 6px;
   background-color: var(--waliBlue);
-  padding: 12px 16px;
-  margin-top: 16px;
+  padding: 12px 20px;
+  margin-top: 8px;
 }
 
-/* ==================== Upload modal ==================== */
-#upload-modal {
-  margin-top: 12px;
-}
-
-#upload-modal button {
-  border: none;
-  border-radius: 2px;
-  background-color: white;
-  padding: 8px 12px;
-}
-
-#upload-modal span {
-  font-size: 14px;
-  font-weight: 400;
-  margin-left: 8px;
-}
-
-/* ==================== Right container (device) ==================== */
-#div-one-right {
-  height: 100%;
-  width: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+/* ==================== Device ==================== */
 .device-div {
   height: 700px;
   min-width: 320px;
@@ -145,7 +150,7 @@ body {
   margin-left: 8px;
 }
 
-/* ==================== Socials ==================== */
+/* ==================== Footer ==================== */
 #footer-div {
   display: flex;
   justify-content: center;
