@@ -1,0 +1,3 @@
+import { writeFileSync } from "fs";
+
+writeFileSync("./.env", `API_KEY=${process.env.API_KEY}n`);
