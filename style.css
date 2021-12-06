@@ -343,4 +343,9 @@ svg {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
+
+  #spinner-div {
+    top: 42%;
+    left: 40%;
+  }
 }

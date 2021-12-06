@@ -22,6 +22,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const storage = getStorage(app);
 
+const body = document.body;
 const uploadInput = document.getElementById("upload-input");
 const selectFileButton = document.getElementById("select-file-button");
 const fileStatus = document.getElementById("file-status");
@@ -42,17 +43,16 @@ selectFileButton.addEventListener("click", () => {
 });
 
 uploadButton.addEventListener("click", function () {
-  if (!uploadInput.value) {
-    alert("Please select a file!");
-    return;
-  }
+  if (!uploadInput.value) return alert("Please select a file!");
 
+  body.style.pointerEvents = "none";
   spinner.style.visibility = "visible";
 
   const bucket = ref(storage, "Uploads/" + fileName);
   uploadBytes(bucket, uploadInput.files[0])
     .then((snapshot) => {})
     .catch((error) => {
+      body.style.pointerEvents = "";
       spinner.style.visibility = "hidden";
       alert(
         "Looks like something went wrong. Please check your file size is less than 5MB and try again."
@@ -62,6 +62,7 @@ uploadButton.addEventListener("click", function () {
     .finally(() => {
       fileName = "No file chosen";
       fileStatus.innerHTML = fileName;
+      body.style.pointerEvents = "";
       spinner.style.visibility = "hidden";
       alert("Your file has been uploaded.");
       console.log("---> File uploaded to bucket");
