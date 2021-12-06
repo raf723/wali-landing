@@ -14,15 +14,15 @@ const spinner = document.getElementById("spinner-div");
 
 let fileName = "No file chosen";
 
-selectFileButton.addEventListener("click", function () {
-  uploadInput.click();
-});
-
 uploadInput.addEventListener("change", function () {
   fileName = uploadInput.value
     ? uploadInput.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1]
     : "No file chosen";
   fileStatus.innerHTML = fileName;
+});
+
+selectFileButton.addEventListener("click", () => {
+  uploadInput.click();
 });
 
 uploadButton.addEventListener("click", function () {
