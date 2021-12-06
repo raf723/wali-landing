@@ -60,7 +60,10 @@ uploadButton.addEventListener("click", function () {
       console.log("--->", error);
     })
     .finally(() => {
+      fileName = "No file chosen";
+      fileStatus.innerHTML = fileName;
       spinner.style.visibility = "hidden";
+      alert("Your file has been uploaded.");
       console.log("---> File uploaded to bucket");
     });
 });

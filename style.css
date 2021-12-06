@@ -100,8 +100,14 @@ body::-webkit-scrollbar {
 }
 
 #upload-div span {
+  display: inline-block;
   font-size: 16px;
   font-weight: 300;
+  max-width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-overflow: ellipsis;
 }
 
 #select-file-button {
@@ -302,10 +308,9 @@ svg {
   }
 
   #div-one-right {
-    height: fit-content;
     width: 100%;
-    margin-top: 0;
-    margin-bottom: 40px;
+    margin-top: 80px;
+    margin-bottom: 80px;
   }
 
   #upload-div {
@@ -314,6 +319,10 @@ svg {
 
   #upload-div h2 {
     font-size: 24px;
+  }
+
+  #upload-div span {
+    max-width: 48%;
   }
 
   .device-div {
