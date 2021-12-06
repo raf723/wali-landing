@@ -1,10 +1,26 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
 import {
   getStorage,
   ref,
   uploadBytes,
 } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-storage.js";
 
-const storage = getStorage();
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBK3PTzI28gwZJ_XdX3sS1rwKI9szEJsbA",
+  authDomain: "thebutterflynetwork-wali.firebaseapp.com",
+  databaseURL: "https://thebutterflynetwork-wali.firebaseio.com",
+  projectId: "thebutterflynetwork-wali",
+  storageBucket: "thebutterflynetwork-wali.appspot.com",
+  messagingSenderId: "49673499559",
+  appId: "1:49673499559:web:7b6ab5398988afec6c7c82",
+  measurementId: "G-HZ6EX6VQM3",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const storage = getStorage(app);
 
 const uploadInput = document.getElementById("upload-input");
 const selectFileButton = document.getElementById("select-file-button");
