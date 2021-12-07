@@ -47,7 +47,9 @@ uploadButton.addEventListener("click", function () {
   body.style.pointerEvents = "none";
   spinner.style.visibility = "visible";
 
-  const bucket = ref(storage, "Uploads/" + fileName);
+  const date = new Date().toISOString();
+  const bucket = ref(storage, "Uploads/" + `${date}_${fileName}`);
+
   uploadBytes(bucket, uploadInput.files[0])
     .then((snapshot) => {})
     .catch((error) => {
