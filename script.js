@@ -5,17 +5,19 @@ import {
   uploadBytes,
 } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-storage.js";
 
+import FIREBASE_API_KEY from "./apiKey.js";
+
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: process.env.API_KEY,
-  authDomain: process.env.AUTH_DOMAIN,
-  databaseURL: process.env.DB_URL,
-  projectId: process.env.PROJECT_ID,
-  storageBucket: process.env.STORAGE_BUCKET,
-  messagingSenderId: process.env.SENDER_ID,
-  appId: process.env.APP_ID,
-  measurementId: process.env.MEASUREMENT_ID,
+  apiKey: FIREBASE_API_KEY,
+  authDomain: "thebutterflynetwork-wali.firebaseapp.com",
+  databaseURL: "https://thebutterflynetwork-wali.firebaseio.com",
+  projectId: "thebutterflynetwork-wali",
+  storageBucket: "thebutterflynetwork-wali.appspot.com",
+  messagingSenderId: "49673499559",
+  appId: "1:49673499559:web:7b6ab5398988afec6c7c82",
+  measurementId: "G-HZ6EX6VQM3",
 };
 
 // Initialize Firebase
