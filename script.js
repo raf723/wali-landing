@@ -51,16 +51,7 @@ uploadButton.addEventListener("click", function () {
   const bucket = ref(storage, "Uploads/" + `${date}_${fileName}`);
 
   uploadBytes(bucket, uploadInput.files[0])
-    .then((snapshot) => {})
-    .catch((error) => {
-      body.style.pointerEvents = "";
-      spinner.style.visibility = "hidden";
-      alert(
-        "Looks like something went wrong. Please check your file size is less than 5MB and try again."
-      );
-      console.log("--->", error);
-    })
-    .finally(() => {
+    .then((snapshot) => {
       uploadInput.value = "";
       fileName = "No file chosen";
       fileStatus.innerHTML = fileName;
@@ -68,7 +59,14 @@ uploadButton.addEventListener("click", function () {
       body.style.pointerEvents = "";
       spinner.style.visibility = "hidden";
 
-      alert("Your file has been uploaded.");
       console.log("---> File uploaded to bucket");
+      alert("Your file has been uploaded.");
+    })
+    .catch((error) => {
+      body.style.pointerEvents = "";
+      spinner.style.visibility = "hidden";
+
+      console.log("--->", error);
+      alert("Please check your file size is less than 5MB and try again.");
     });
 });
