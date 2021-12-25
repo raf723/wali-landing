@@ -130,6 +130,18 @@ body::-webkit-scrollbar {
   transition: all 1s ease;
 }
 
+#text-email {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+#upload-div a {
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+}
+
 /* ==================== Device ==================== */
 .device-div {
   height: 700px;
