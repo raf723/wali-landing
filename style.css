@@ -303,7 +303,12 @@ svg {
 
 /* ==================== Media queries ==================== */
 @media screen and (max-width: 480px) {
+  body {
+    flex-direction: column;
+  }
+
   #div-one {
+    height: auto;
     flex-direction: column;
     margin: 10% 10%;
   }
@@ -322,7 +327,7 @@ svg {
   #div-one-right {
     width: 100%;
     margin-top: 80px;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
   }
 
   #upload-div {
@@ -354,6 +359,11 @@ svg {
     background-color: rgb(20, 20, 20);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+  }
+
+  #footer-div {
+    margin-top: 32px;
+    margin-bottom: 32px;
   }
 
   #spinner-div {
