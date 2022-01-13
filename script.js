@@ -22,6 +22,7 @@ const app = initializeApp(firebaseConfig);
 const storage = getStorage(app);
 
 const body = document.body;
+const uploadInfo = document.getElementById("upload-info");
 const uploadInput = document.getElementById("upload-input");
 const selectFileButton = document.getElementById("select-file-button");
 const fileStatus = document.getElementById("file-status");
@@ -29,6 +30,10 @@ const uploadButton = document.getElementById("upload-button");
 const spinner = document.getElementById("spinner-div");
 
 let fileName = "No file chosen";
+
+uploadInfo.addEventListener("click", () => {
+  alert("CSV, Excel, PDF, Word and image files accepted");
+});
 
 uploadInput.addEventListener("change", function () {
   fileName = uploadInput.value

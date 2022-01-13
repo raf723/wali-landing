@@ -84,6 +84,16 @@ body::-webkit-scrollbar {
   padding: 24px;
 }
 
+#upload-div #title-div {
+  display: flex;
+}
+
+#upload-info {
+  height: 20px;
+  width: 20px;
+  margin-left: 12px;
+}
+
 #upload-div h2 {
   font-size: 32px;
   margin: 0px;
@@ -94,12 +104,12 @@ body::-webkit-scrollbar {
   cursor: pointer;
   color: white;
   font-size: 14px;
-  font-weight: 100;
+  font-weight: 500;
   border-radius: 6px;
   padding: 8px 0;
 }
 
-#upload-div span {
+#file-status {
   display: inline-block;
   font-size: 16px;
   font-weight: 300;
@@ -113,7 +123,7 @@ body::-webkit-scrollbar {
 #select-file-button {
   border: solid 1px white;
   background-color: var(--waliBlue);
-  margin-top: 20px;
+  margin-top: 30px;
   margin-left: 12px;
 }
 
